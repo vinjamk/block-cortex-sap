@@ -39,7 +39,7 @@ view: materials_valuation_v2 {
     sql: ${TABLE}.PostingPeriod_LFMON ;;
   }
 
-  dimension: fiscal_year {
+  dimension: fiscal_year_lfgja {
     type: string
     sql: ${TABLE}.FiscalYear ;;
   }
@@ -47,7 +47,7 @@ view: materials_valuation_v2 {
   dimension: month_year {
     type: string
     hidden: no
-    sql: concat(${fiscal_year},"/",${posting_period_lfmon}) ;;
+    sql: concat(${fiscal_year_lfgja},"/",${posting_period_lfmon}) ;;
   }
 
   dimension: price_control_indicator_vprsv {
@@ -83,7 +83,7 @@ view: materials_valuation_v2 {
       valuation_area_bwkey,
       price_unit_peinh,
       posting_period_lfmon,
-      fiscal_year,
+      fiscal_year_lfgja,
       price_control_indicator_vprsv,
       standard_cost_stprs,
       value_of_total_valuated_stock_salk3,
